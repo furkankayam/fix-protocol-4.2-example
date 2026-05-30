@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.5.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.furkankayam'
+version = 'v.0.1'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    quickFixJVersion = '3.0.0'
+}
+
+dependencies {
+    // --- Core ---
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // --- Lombok ---
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // --- QuickFIX/J Core Engine (FIX Protocol) ---
+    implementation "org.quickfixj:quickfixj-core:${quickFixJVersion}"
+    implementation "org.quickfixj:quickfixj-messages-fix42:${quickFixJVersion}"
+
+    // --- Test ---
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

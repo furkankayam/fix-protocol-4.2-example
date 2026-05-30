@@ -1,0 +1,11 @@
+20260530-03:18:37: Session FIX.4.2:MY_CLIENT_APP->EXCHANGE_SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20260530-03:18:37: Created session: FIX.4.2:MY_CLIENT_APP->EXCHANGE_SERVER
+20260530-03:18:37: Configured socket addresses for session: [/127.0.0.1:9876]
+20260530-03:18:37: java.net.ConnectException during connection to kubernetes.docker.internal/127.0.0.1:9876: java.net.ConnectException: Connection refused: no further information (Next retry in 60000 milliseconds)
+20260530-03:19:38: MINA session created: local=/127.0.0.1:51970, class org.apache.mina.transport.socket.nio.NioSocketSession, remote=kubernetes.docker.internal/127.0.0.1:9876
+20260530-03:19:39: Initiated logon request
+20260530-03:19:39: Received logon
+20260530-03:21:46: Received logout request
+20260530-03:21:46: Sent logout response
+20260530-03:21:46: Disconnecting: Received logout request
+20260530-03:21:46: java.net.ConnectException during connection to kubernetes.docker.internal/127.0.0.1:9876: java.net.ConnectException: Connection refused: no further information (Next retry in 60000 milliseconds)

@@ -1,0 +1,9 @@
+20260530-03:19:14: Session FIX.4.2:EXCHANGE_SERVER->MY_CLIENT_APP schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20260530-03:19:14: Created session: FIX.4.2:EXCHANGE_SERVER->MY_CLIENT_APP
+20260530-03:19:39: Accepting session FIX.4.2:EXCHANGE_SERVER->MY_CLIENT_APP from /127.0.0.1:51970
+20260530-03:19:39: Acceptor heartbeat set to 30 seconds
+20260530-03:19:39: Received logon
+20260530-03:19:39: Responding to Logon request
+20260530-03:21:46: Initiated logout request
+20260530-03:21:46: Received logout response
+20260530-03:21:46: Disconnecting: Received logout response

@@ -1,0 +1,12 @@
+# Application Config
+server:
+  port: 8082
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: fix-protocol-client
+  config:
+    import:
+      - classpath:fix-protocol.yaml

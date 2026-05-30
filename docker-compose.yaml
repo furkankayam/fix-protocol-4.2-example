@@ -1,0 +1,32 @@
+# Services
+services:
+
+  # FIX Protocal Client
+  fix-protocol-client:
+    build: ./fix-protocol-client/.
+    container_name: fix-protocol-client
+    restart: unless-stopped
+    depends_on:
+      - fix-protocol-server
+    environment:
+      - FIX_CLIENT_HOST=fix-protocol-server
+    ports:
+      - "8082:8082"
+    networks:
+      - my-network
+
+  # FIX Protocol Server
+  fix-protocol-server:
+    build: ./fix-protocol-server/.
+    container_name: fix-protocol-server
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    networks:
+      - my-network
+
+
+# Networks
+networks:
+  my-network:
+    driver: bridge

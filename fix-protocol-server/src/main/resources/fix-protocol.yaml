@@ -1,0 +1,7 @@
+# FIX Protocol Server configuration
+fix:
+  server:
+    port: 9876
+    sender-comp-id: EXCHANGE_SERVER
+    target-comp-id: MY_CLIENT_APP
+    connection-type: acceptor

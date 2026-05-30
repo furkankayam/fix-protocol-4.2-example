@@ -1,0 +1,9 @@
+# FIX Protocol Client configuration
+fix:
+  client:
+    port: 9876
+    host: 127.0.0.1
+    sender-comp-id: MY_CLIENT_APP
+    target-comp-id: EXCHANGE_SERVER
+    connection-type: initiator
+    heartbeat-interval: 30
